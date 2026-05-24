@@ -1,25 +1,26 @@
 # The Geometry of Spacetime (LaTeX Manuscript Repository)
 
-This repository contains a scientific-manuscript style LaTeX project for the article:
+This repository contains a scientific LaTeX manuscript project for:
 
 **The Geometry of Spacetime: A Temporal-Radial Hyperspherical Model of Cosmological Expansion**.
 
-## Structure
+## Repository layout
 
-- `main.tex` — top-level LaTeX file.
-- `sections/` — sectioned manuscript content.
-- `references.bib` — BibTeX bibliography entries.
-- `.gitignore` — common LaTeX build artifacts.
+- `main.tex` — manuscript entry point (title, abstract, packages, bibliography setup).
+- `sections/manuscript.tex` — main scientific content.
+- `figures/*.tikz` — mathematical schematic illustrations (TikZ source).
+- `references.bib` — bibliography database.
+- `.gitignore` — LaTeX build artifacts.
 
 ## Build
 
-### Option A: latexmk (recommended)
+### Option A (recommended if available)
 
 ```bash
 latexmk -pdf main.tex
 ```
 
-### Option B: pdflatex + bibtex
+### Option B
 
 ```bash
 pdflatex main.tex
@@ -28,6 +29,10 @@ pdflatex main.tex
 pdflatex main.tex
 ```
 
-## Notes
+## Included mathematical illustrations
 
-The manuscript clearly separates interpretive geometry from established cosmological constraints and keeps speculative extensions explicitly labeled as speculative.
+1. Temporal-radial foliation of hypersurfaces.
+2. Schematic past-directed view curve through nested hypersurfaces.
+3. Expansion-history and comoving-integrand intuition panel.
+
+All figures are vector-based TikZ and can be edited directly in `figures/`.

@@ -1,99 +1,81 @@
 \section{Introduction}
+The question ``Where is the center of the universe?'' is often asked in spatial language, but in FLRW cosmology there is no unique privileged spatial center. Any comoving observer occupies the center of their own observable patch. This manuscript develops a temporal-radial interpretation: the ``center'' corresponds to the earliest-time boundary $A(t)\to 0$, not to a reachable point in present-day space.
 
-The question ``Where is the center of the universe?'' appears simple, but in modern cosmology it is incorrectly framed. The observable universe is centered on the observer, not because the observer occupies a privileged physical location, but because observation is limited by the finite speed of light and the finite age of the universe. A distant observer billions of light-years away would also see themselves at the center of their own observable universe. The cosmological principle, according to which the universe is homogeneous and isotropic on sufficiently large scales, removes the possibility of a unique spatial center.
-
-However, the absence of a spatial center does not necessarily remove the possibility of a geometrical origin. The Big Bang is not a point in pre-existing space from which matter exploded outward. Rather, it is the early boundary of spacetime itself. The proper scientific reformulation is therefore not: ``Where is the center of the universe?'' but: ``Can the beginning of cosmic time be represented geometrically as the temporal center of spacetime?''
-
-This paper develops a model in which three-dimensional space is represented as the hypersurface of a growing four-dimensional sphere. The radial coordinate of the embedding is interpreted as cosmic time. In this view, the center of the sphere is not a location in the three-dimensional universe. It is the temporal origin: the limiting condition $A(t)\rightarrow0$, corresponding to the beginning of cosmic time.
-
-The proposal is not that galaxies move through a higher-dimensional spatial volume toward or away from a central point. Instead, the universe at each cosmic time is represented as a spatial hypersurface, and the succession of these hypersurfaces forms the history of cosmic expansion. This is closely related to the closed FLRW model, but the emphasis here is interpretive: the ``inside'' of the sphere is not ordinary space. It is a geometrical representation of the past.
-
-The standard cosmological model, $\Lambda$CDM, remains highly successful. Planck and later analyses remain broadly consistent with spatial flatness within uncertainties \citep{planck2018vi,tristram2024}.
-
-\section{From a Spatial Center to a Temporal Center}
-
-Let the universe at cosmic time $t$ be represented by a three-dimensional spacelike hypersurface, $\Sigma_t$. In this model, each $\Sigma_t$ is embedded in an auxiliary four-dimensional Euclidean space as the surface of a four-dimensional sphere:
+\section{Temporal-Radial Foliation}
+Let each constant-time hypersurface be $\Sigma_t\cong S^3(A(t))$, embedded in an auxiliary Euclidean space for visualization. Cosmic history is the foliation
 \[
-\Sigma_t \cong S^3(A(t)).
+\mathcal M = \bigcup_t \Sigma_t,
 \]
-The cosmic history is represented as a foliation,
-\[
-\mathcal{M} = \bigcup_t \Sigma_t,
-\]
-where each hypersurface corresponds to a different cosmic time.
+with the Big Bang represented as the limit $A(t)\to 0$. The radial embedding coordinate is interpreted as time-ordering of slices, not as a traversable physical spatial dimension.
 
-The Big Bang corresponds to the limiting condition $A(t)\rightarrow0$. Thus the ``center'' of the construction is not a point on the present spatial hypersurface, nor a coordinate that an observer can travel to through ordinary space.
-
-\[
-\boxed{\text{The center of the universe is not a where. It is a when.}}
-\]
+\begin{figure}[htbp]
+\centering
+\input{figures/fig_foliation.tikz}
+\caption{Schematic 2D slice of the temporal-radial foliation. Concentric circles represent successive spatial hypersurfaces $\Sigma_t$. The origin denotes the temporal boundary $A(t)\to 0$.}
+\label{fig:foliation}
+\end{figure}
 
 \section{Relation to FLRW Cosmology}
-
-For a positively curved FLRW geometry,
+For positive-curvature FLRW geometry,
 \[
-\dd s^2=-c^2\dd t^2+A^2(t)\left[\dd\chi^2+\sin^2\chi\left(\dd\theta^2+\sin^2\theta\,\dd\phi^2\right)\right].
+\dd s^2=-c^2\dd t^2 + A^2(t)\left[\dd\chi^2+\sin^2\chi\left(\dd\theta^2+\sin^2\theta\,\dd\phi^2\right)\right].
 \]
-Writing $A(t)=a(t)R_c$ separates the scale factor from curvature radius. With $a(t_0)=1$, the model is mathematically closest to a closed FLRW universe.
+Using $A(t)=a(t)R_c$ with $a(t_0)=1$ separates expansion from curvature scale. Observationally, near-flatness constraints imply either a very large $R_c$ or interpretation of the construction as an embedding visualization \citep{planck2018vi,tristram2024}.
 
-Observationally, current data favor near-flat geometry, so the model is best viewed either as (i) an embedding visualization, or (ii) a closed-universe scenario with $A(t_0)$ far larger than the observable horizon scale \citep{planck2018vi,tristram2024}.
-
-\section{Temporal-Radial Embedding and the View Curve}
-
-A point on the embedded three-sphere is
-\[
-\mathbf{X}(t,\chi,\theta,\phi)=A(t)\,\mathbf{n}(\chi,\theta,\phi),
-\]
-with $\mathbf{n}$ a unit vector on $S^3$. The embedding center $\mathbf{X}=0$ is not part of the present spatial slice; it appears only as the limit $A(t)\rightarrow0$.
-
-For radial null propagation, $\dd s^2=0$ implies
+\section{View Curve and Null Observation Geometry}
+Radial null propagation satisfies
 \[
 \frac{\dd\chi}{\dd t}=\pm\frac{c}{A(t)}.
 \]
-For light arriving at $t_0$,
+For photons arriving now at $t_0$,
 \[
 D_C(t)=\int_t^{t_0}\frac{c\,\dd t'}{a(t')}=c\int_0^z\frac{\dd z'}{H(z')}.
 \]
-This is the relevant observable distance, not the Euclidean arc-length in the auxiliary embedding space \citep{hogg1999}.
+Thus observational depth is determined by a past-directed null curve through expanding spacetime, not by Euclidean distance inside the embedding space \citep{hogg1999}.
 
-\section{CMB, Horizons, and Acceleration}
+\begin{figure}[htbp]
+\centering
+\input{figures/fig_view_curve.tikz}
+\caption{Schematic view curve in an embedding slice. Light from higher redshift sources traces inward toward earlier hypersurfaces (smaller $A$).}
+\label{fig:view-curve}
+\end{figure}
 
-The cosmic microwave background can be represented as the intersection
+\section{Horizons, CMB, and Why the Early Universe Appears in All Directions}
+The CMB is modeled as
 \[
 \mathrm{CMB}=J^-(p_0)\cap\Sigma_{t_{\mathrm{LSS}}},
 \]
-of the observer's past light cone with the last-scattering hypersurface. The particle horizon at the present epoch is
+the intersection of our past light cone with last scattering. The present particle horizon is
 \[
-D_{\mathrm{hor}}(t_0)=\int_0^{t_0}\frac{c\,\dd t}{a(t)}.
+D_{\mathrm{hor}}(t_0)=\int_0^{t_0}\frac{c\,\dd t}{a(t)},
 \]
-In standard cosmology this is approximately $46$--$47$ billion light-years in comoving distance.
+which is about $46$--$47$ billion light-years in comoving distance in Planck-like $\Lambda$CDM fits.
 
-Expansion and acceleration satisfy
+\section{Acceleration and Dynamics}
+The geometrical picture does not replace dynamics. Expansion and acceleration remain governed by
 \[
-H(t)=\frac{\dot A}{A},\qquad \ddot A>0\,\,\text{(acceleration)}.
+H=\frac{\dot A}{A},\qquad
+\frac{\ddot A}{A}=-\frac{4\pi G}{3}\left(\rho+\frac{3p}{c^2}\right)+\frac{\Lambda c^2}{3}.
 \]
-The underlying dynamics remain those of the Friedmann equations; the embedding view is interpretive, not a replacement for dark energy physics \citep{riess1998,perlmutter1999}.
+Acceleration ($\ddot A>0$) requires sufficiently negative effective pressure, as in dark-energy domination \citep{riess1998,perlmutter1999}.
+
+\begin{figure}[htbp]
+\centering
+\input{figures/fig_scale_and_integrand.tikz}
+\caption{Conceptual relation between expansion history $a(t)$ and null-curve depth via the integrand $1/a(t)$. Early times contribute strongly to line-of-sight comoving distance.}
+\label{fig:integrand}
+\end{figure}
 
 \section{Speculative Extension: Angular Drift}
-
-A phenomenological drift extension can be written
+A phenomenological drift extension is
 \[
-\dd s^2=-c^2\dd t^2+A^2(t)\left[\dd\chi^2+\sin^2\chi\left(\dd\theta^2+\sin^2\theta(\dd\phi-\Omega(t,\chi)\dd t)^2\right)\right].
+\dd s^2=-c^2\dd t^2+A^2(t)\Big[\dd\chi^2+\sin^2\chi\big(\dd\theta^2+\sin^2\theta(\dd\phi-\Omega(t,\chi)\dd t)^2\big)\Big].
 \]
-A photon would accumulate
+The accumulated drift is approximately
 \[
 \Delta\phi\approx\int_{t_e}^{t_0}\Omega(t,\chi(t))\,\dd t.
 \]
-In the baseline model $\Omega=0$. Nonzero drift is speculative and strongly constrained by isotropy/polarization tests \citep{planck2018vii,gruppuso2020}.
-
-\section{Black Holes and Local Temporal Deformation}
-
-Within general relativity, black holes represent local causal structure deformation, not paths to the cosmological temporal origin. The ``icicle'' metaphor can be used qualitatively for severe time-dilation effects, but should not be interpreted literally as travel to the Big Bang.
-
-\section{Observational Constraints and Falsifiability}
-
-As an interpretation of FLRW, the model introduces no new predictions. To become a distinct theory, it must introduce measurable effects, such as detectable positive curvature, matched-circle signatures, nonzero angular drift, or a modified expansion history distinguishable from $\Lambda$CDM.
+Baseline FLRW corresponds to $\Omega=0$; nonzero drift is speculative and tightly constrained \citep{planck2018vii,gruppuso2020}.
 
 \section{Conclusion}
-
-The model reframes the center problem: spacetime has no spatial center in the FLRW sense, but it does possess a temporal origin. In this interpretation, the Big Bang is the zero-radius boundary of cosmic time, and distant observation corresponds to traversing null curves toward earlier hypersurfaces.
+The temporal-radial hyperspherical framework is most robust as a geometrical interpretation of FLRW: no spatial center exists, while a temporal origin does. Its value lies in clarifying that distant observations probe earlier slices of cosmic time along null curves.
