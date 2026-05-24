@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=1.0,>=Latex]
+\draw[gray!55] (0,0) circle (1.0);
+\draw[gray!55] (0,0) circle (1.8);
+\draw[gray!55] (0,0) circle (2.6);
+\draw[gray!65] (0,0) circle (3.4);
+\fill[blue] (3.4,0) circle (1.5pt);
+\node[blue,below] at (3.4,0) {observer $p_0$};
+\draw[red,very thick,->] (3.4,0) .. controls (2.2,0.8) and (1.4,1.5) .. (0.8,2.5);
+\draw[red,very thick,->] (0.8,2.5) .. controls (0.3,2.0) and (-0.3,1.3) .. (-0.6,0.6);
+\node[red] at (1.4,2.8) {past-directed null curve (schematic)};
+\node at (-2.2,-2.9) {larger redshift $\Rightarrow$ earlier $t$};
+\end{tikzpicture}

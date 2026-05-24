@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=1.0,>=Latex]
+\draw[gray!50] (0,0) circle (0.9);
+\draw[gray!55] (0,0) circle (1.6);
+\draw[gray!60] (0,0) circle (2.3);
+\draw[gray!65] (0,0) circle (3.0);
+\fill (0,0) circle (1.2pt);
+\node[below left] at (0,0) {$A(t)\to 0$};
+\node at (0.55,0.65) {$\Sigma_{t_1}$};
+\node at (1.25,1.25) {$\Sigma_{t_2}$};
+\node at (1.95,1.9) {$\Sigma_{t_3}$};
+\node at (2.7,2.5) {$\Sigma_{t_0}$};
+\draw[->,thick] (0.2,0.0) -- (2.8,0.0) node[midway,below] {radial embedding direction (time-ordering)};
+\end{tikzpicture}

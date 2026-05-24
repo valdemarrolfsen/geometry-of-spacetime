@@ -1,0 +1,81 @@
+\section{Introduction}
+The question ``Where is the center of the universe?'' is often asked in spatial language, but in FLRW cosmology there is no unique privileged spatial center. Any comoving observer occupies the center of their own observable patch. This manuscript develops a temporal-radial interpretation: the ``center'' corresponds to the earliest-time boundary $A(t)\to 0$, not to a reachable point in present-day space.
+
+\section{Temporal-Radial Foliation}
+Let each constant-time hypersurface be $\Sigma_t\cong S^3(A(t))$, embedded in an auxiliary Euclidean space for visualization. Cosmic history is the foliation
+\[
+\mathcal M = \bigcup_t \Sigma_t,
+\]
+with the Big Bang represented as the limit $A(t)\to 0$. The radial embedding coordinate is interpreted as time-ordering of slices, not as a traversable physical spatial dimension.
+
+\begin{figure}[htbp]
+\centering
+\input{figures/fig_foliation.tikz}
+\caption{Schematic 2D slice of the temporal-radial foliation. Concentric circles represent successive spatial hypersurfaces $\Sigma_t$. The origin denotes the temporal boundary $A(t)\to 0$.}
+\label{fig:foliation}
+\end{figure}
+
+\section{Relation to FLRW Cosmology}
+For positive-curvature FLRW geometry,
+\[
+\dd s^2=-c^2\dd t^2 + A^2(t)\left[\dd\chi^2+\sin^2\chi\left(\dd\theta^2+\sin^2\theta\,\dd\phi^2\right)\right].
+\]
+Using $A(t)=a(t)R_c$ with $a(t_0)=1$ separates expansion from curvature scale. Observationally, near-flatness constraints imply either a very large $R_c$ or interpretation of the construction as an embedding visualization \citep{planck2018vi,tristram2024}.
+
+\section{View Curve and Null Observation Geometry}
+Radial null propagation satisfies
+\[
+\frac{\dd\chi}{\dd t}=\pm\frac{c}{A(t)}.
+\]
+For photons arriving now at $t_0$,
+\[
+D_C(t)=\int_t^{t_0}\frac{c\,\dd t'}{a(t')}=c\int_0^z\frac{\dd z'}{H(z')}.
+\]
+Thus observational depth is determined by a past-directed null curve through expanding spacetime, not by Euclidean distance inside the embedding space \citep{hogg1999}.
+
+\begin{figure}[htbp]
+\centering
+\input{figures/fig_view_curve.tikz}
+\caption{Schematic view curve in an embedding slice. Light from higher redshift sources traces inward toward earlier hypersurfaces (smaller $A$).}
+\label{fig:view-curve}
+\end{figure}
+
+\section{Horizons, CMB, and Why the Early Universe Appears in All Directions}
+The CMB is modeled as
+\[
+\mathrm{CMB}=J^-(p_0)\cap\Sigma_{t_{\mathrm{LSS}}},
+\]
+the intersection of our past light cone with last scattering. The present particle horizon is
+\[
+D_{\mathrm{hor}}(t_0)=\int_0^{t_0}\frac{c\,\dd t}{a(t)},
+\]
+which is about $46$--$47$ billion light-years in comoving distance in Planck-like $\Lambda$CDM fits.
+
+\section{Acceleration and Dynamics}
+The geometrical picture does not replace dynamics. Expansion and acceleration remain governed by
+\[
+H=\frac{\dot A}{A},\qquad
+\frac{\ddot A}{A}=-\frac{4\pi G}{3}\left(\rho+\frac{3p}{c^2}\right)+\frac{\Lambda c^2}{3}.
+\]
+Acceleration ($\ddot A>0$) requires sufficiently negative effective pressure, as in dark-energy domination \citep{riess1998,perlmutter1999}.
+
+\begin{figure}[htbp]
+\centering
+\input{figures/fig_scale_and_integrand.tikz}
+\caption{Conceptual relation between expansion history $a(t)$ and null-curve depth via the integrand $1/a(t)$. Early times contribute strongly to line-of-sight comoving distance.}
+\label{fig:integrand}
+\end{figure}
+
+\section{Speculative Extension: Angular Drift}
+A phenomenological drift extension is
+\[
+\dd s^2=-c^2\dd t^2+A^2(t)\Big[\dd\chi^2+\sin^2\chi\big(\dd\theta^2+\sin^2\theta(\dd\phi-\Omega(t,\chi)\dd t)^2\big)\Big].
+\]
+The accumulated drift is approximately
+\[
+\Delta\phi\approx\int_{t_e}^{t_0}\Omega(t,\chi(t))\,\dd t.
+\]
+Baseline FLRW corresponds to $\Omega=0$; nonzero drift is speculative and tightly constrained \citep{planck2018vii,gruppuso2020}.
+
+\section{Conclusion}
+The temporal-radial hyperspherical framework is most robust as a geometrical interpretation of FLRW: no spatial center exists, while a temporal origin does. Its value lies in clarifying that distant observations probe earlier slices of cosmic time along null curves.
