@@ -1,0 +1,115 @@
+\section{View lines, deflection, and timing}
+\label{sec:rays}
+\subsection{Null propagation in the specified metric}
+For numerical ray tracing define
+\begin{equation}\label{eq:optical}
+ N=\sqrt{1+2\ph},\qquad B=\sqrt{1-2\ph},\qquad
+ v=\frac{N}{B}=1+2\ph+\order(\epsilon^2).
+\end{equation}
+The symbol $v$ is a dimensionless coordinate speed per conformal time on
+the unit sphere. The speed measured locally by an orthonormal observer
+remains $c$. The code treats the displayed truncated metric as its
+numerical metric. Taking square roots and integrating its trajectories
+retains some terms of order $\epsilon^2$ and higher, but does not promote
+it to an exact solution of the nonlinear Einstein equations. All physical
+claims are restricted to first order.
+
+Set $s=\eta_o-\eta$. Spherical symmetry about the mass confines each
+spatial ray to a totally geodesic two-sphere in $\Sthree$. Represent this
+two-sphere by $\bm n\in\mathbb R^3$, with
+$\bm n^2=1$ and tangent momentum $\bm p\cdot\bm n=0$. The mass lies
+at $\bm n_L=(1,0,0)$, so $\mu=\bm n\cdot\bm n_L$.
+The reduced optical Hamiltonian is $\mathcal K=v|\bm p|$. In the
+past-directed parameter and with momentum pointing along the past
+spatial trajectory, its equations are
+\begin{align}
+ \frac{\dd\bm n}{\dd s}&=v\frac{\bm p}{|\bm p|},\label{eq:ray-n}\\
+ \frac{\dd\bm p}{\dd s}&=-|\bm p|\nabla_S v-v|\bm p|\bm n,
+ \label{eq:ray-p}\\
+ \nabla_Sv&=\frac{2v}{1-4\ph^2}\,
+ \epsilon g F_{,\mu}(\bm n_L-\mu\bm n).
+ \label{eq:gradient}
+\end{align}
+The last term in Eq.~\eqref{eq:ray-p} preserves tangency to the unit
+sphere. These equations preserve $\bm n^2=1$, $\bm n\cdot\bm p=0$,
+and the angular momentum component about the lens axis. Conformal time
+is not an affine parameter.
+
+The physical ray is displayed using the \emph{background-time} map
+$\bm X_{
+\mathrm{view}}=A(\eta)\bm n(\eta)$, which keeps radius exclusively as
+the time-layer label. Figure~\ref{fig:nested} uses this map.
+Equation~\eqref{eq:deformed-embedding}, used separately for spatial
+deformation, has a different purpose. The two maps are explicitly
+distinguished instead of silently assigning both meanings to one radius.
+
+\subsection{A deflection with fixed endpoints}
+Comparing arbitrary curves at equal coordinate parameters is insufficient
+to define a lensing prediction. We fix a coordinate-stationary source
+worldline, an observer worldline, and a reception event. For the reference
+FLRW ray, choose a launch angle $\alpha_0$ in the observer's tangent frame
+and a source distance $s_0$. Its source position is
+\begin{equation}
+ \bm n_s=\cos s_0\,\bm n_o+\sin s_0\,\bm e_o(\alpha_0).
+\end{equation}
+For the perturbed ray, a two-variable shooting calculation adjusts
+$(\alpha,s)$ until the same spatial source is reached. The emission time
+is allowed to change because the source is a worldline, not a fixed
+emission event. The predicted angular displacement is
+\begin{equation}\label{eq:angular-shift}
+ \delta\alpha=\alpha-\alpha_0.
+\end{equation}
+The angular coordinate in the observer's tangent plane equals the
+orthonormal-frame angle because the spatial metric there is conformally
+isotropic. Consequently Eq.~\eqref{eq:angular-shift} is an astrometric
+model-to-reference prediction for the stipulated source matching. It is
+not inferred from the apparent winding of a polar drawing.
+
+The sources and observer in this experiment are test worldlines held at
+fixed coordinates. They are not assumed to follow the dust velocity
+field. Using dust tracers would require evolving their positions and
+including their peculiar-velocity contributions.
+
+An independent first-order check follows by projecting the perturbed ray
+onto the parallel-transported transverse unit vector $\bm b$ along its
+reference great circle. The transverse displacement obeys
+$y''+y=-2\bm b\cdot\nabla_S\ph$, with the derivatives here taken
+with respect to $s$. Setting $y(0)=y(s_0)=0$ gives
+\begin{equation}\label{eq:born-angle}
+ \delta\alpha_{\mathrm{first}}=\frac{2}{\sin s_0}
+ \int_0^{s_0}\sin(s_0-s)\,
+ \bm b\cdot\nabla_S\ph(\eta_o-s,\bm n_0(s))\,\dd s.
+\end{equation}
+The test remains away from $s_0=\pi$, where antipodal focusing would
+invalidate this simple boundary-value comparison.
+
+\subsection{An independent radial timing calculation}
+A ray through the center follows a meridian with no transverse deflection.
+Let $\ell$ be its unwrapped spatial arc coordinate. The null condition
+gives $\dd\ell/\dd s=v$. For a fixed source arc distance $s_0$, expand
+the arrival condition $\ell(s)=s_0$ to first order about the background
+path $\bm n_0(\ell)$:
+\begin{equation}\label{eq:born-delay}
+ \Delta s=-2\int_0^{s_0}
+ \ph(\eta_o-\ell,\bm n_0(\ell))\,\dd\ell+\order(\epsilon^2).
+\end{equation}
+This is an additional conformal lookback at fixed reception, relative to
+the matched FLRW source. A negative potential along most of the path
+gives $\Delta s>0$: the emission must occur earlier. The corresponding
+background cosmic-time difference is computed with Eq.~\eqref{eq:dust}.
+Raw conformal-time differences depend on the specified coordinate and
+background identification. An operational clock delay would additionally
+specify the emission/reception clock protocol.
+
+\subsection{Frequency along a view line}
+For the coordinate-stationary normal observers, the photon energy is
+proportional to $|\bm p|/(AB)$. Thus
+\begin{equation}\label{eq:redshift}
+ 1+z=\frac{|\bm p_e|}{|\bm p_o|}\frac{A_oB_o}{A_eB_e}.
+\end{equation}
+The normalization of $\bm p$ cancels. At $\epsilon=0$, this reduces to
+$1+z=A_o/A_e$, checked numerically. For moving sources or receivers,
+the appropriate four-velocities must instead be used in
+$(k_\mu u^\mu)_e/(k_\mu u^\mu)_o$. The present calculation includes
+the metric's gravitational and expansion effects for the stated normal
+observers, and omits dust Doppler terms.

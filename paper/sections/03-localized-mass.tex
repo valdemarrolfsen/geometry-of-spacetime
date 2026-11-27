@@ -1,0 +1,98 @@
+\section{A localized mass perturbation on the three-sphere}
+\label{sec:mass}
+In Newtonian (Poisson) gauge, take a scalar perturbation with negligible
+anisotropic stress:
+\begin{equation}\label{eq:perturbed}
+ \dd s^2=A^2(\eta)\left[-(1+2\ph)\dd\eta^2
+ +(1-2\ph)\gamma_{ij}\dd x^i\dd x^j\right]+\order(\epsilon^2).
+\end{equation}
+The potential $\ph=\Phi/c^2$ is dimensionless and of order $\epsilon$.
+It perturbs both the lapse and the spatial metric. Curved-background scalar
+perturbations are an established way to describe inhomogeneities
+\citep{Canay2022}. We specify the source through the linear Einstein
+constraints rather than inserting a flat-space $-GM/r$ potential globally.
+
+\subsection{Evolution and reconstructed matter}
+The linear dust equation for the potential, with unit positive spatial
+curvature, is
+\begin{equation}\label{eq:bardeen}
+ \ph''+3\Hc\ph'+(2\Hc'+\Hc^2-1)\ph=0.
+\end{equation}
+The comoving density contrast $\Delta$, velocity potential $V$, and
+Newtonian-gauge density contrast $\delta_N$ obey
+\begin{align}
+ \Delta&=\frac{2}{3(\Hc^2+1)}(\nabla_\gamma^2+3)\ph,
+       \label{eq:constraint-density}\\
+ V&=-\frac{2}{3(\Hc^2+1)}(\ph'+\Hc\ph),
+       \label{eq:constraint-velocity}\\
+ \delta_N&=\Delta+3\Hc V.\label{eq:constraint-gauge}
+\end{align}
+These are the first-order dust relations, specialized to the conventions
+above \citep[Eq.~(14b)--(16)]{UgglaWainwright2013}. Our convention for the
+dimensionless peculiar velocity is $v^i/c=\nabla_\gamma^i V$ at this order.
+Using Eq.~\eqref{eq:hubble} directly verifies
+\begin{equation}\label{eq:conservation}
+ V'+\Hc V=-\ph,\qquad \delta_N'=-\nabla_\gamma^2V+3\ph'.
+\end{equation}
+The accompanying symbolic script checks both identities without selecting
+one particular spatial eigenmode.
+
+Write $\ph(\eta,\chi)=\epsilon g(\eta)F(\cos\chi)$, with $g(\eta_o)=1$.
+Equation~\eqref{eq:bardeen} reduces for Eq.~\eqref{eq:dust} to
+\begin{equation}\label{eq:growth}
+ g''+3\cot(\eta/2)g'-2g=0.
+\end{equation}
+We select the regular growing solution by starting with a multiple of
+\begin{equation}\label{eq:growth-series}
+ 1+\frac{\eta^2}{7}+\frac{\eta^4}{84}+\frac{\eta^6}{1320}
+ +\order(\eta^8)
+\end{equation}
+at $\eta_i=10^{-3}$, and normalize at reception. An independent numerical
+check uses the reduction-of-order expression
+\begin{equation}
+ g(\eta)\propto \frac{\Hc(\eta)}{A^2(\eta)}
+ \int_0^\eta\frac{A(\tilde\eta)}{\Hc^2(\tilde\eta)}\,\dd\tilde\eta.
+\end{equation}
+
+\subsection{Smoothness, compensation, and the low spatial modes}
+Let $\mu=\cos\chi$ and $\kappa=\sigma^{-2}$. Define
+\begin{align}
+ Q(\mu)&=\exp[\kappa(\mu-1)],\\
+ q_0&=\langle Q\rangle=\frac{2e^{-\kappa}I_1(\kappa)}{\kappa},
+ &q_1&=4\langle\mu Q\rangle=\frac{8e^{-\kappa}I_2(\kappa)}{\kappa},\\
+ F(\mu)&=-\frac{Q(\mu)-q_0-q_1\mu}{1-q_0-q_1}.
+ \label{eq:profile}
+\end{align}
+Here $I_n$ is the modified Bessel function and the normalized three-sphere
+average of a radial function is
+\begin{equation}
+ \langle f\rangle=\frac{2}{\pi}\int_0^\pi f(\cos\chi)\sin^2\chi\,\dd\chi.
+\end{equation}
+Since $\langle\mu^2\rangle=1/4$, this construction gives
+$F(1)=-1$, $\langle F\rangle=0$, and $\langle\mu F\rangle=0$.
+It removes the homogeneous mode and the rotationally symmetric dipole
+mode, avoiding a background redefinition and the exceptional lowest
+scalar modes. Smoothness at both poles follows from smooth dependence
+on $\cos\chi$.
+
+The sphere Laplacian is computed without singular polar divisions:
+\begin{equation}\label{eq:laplace}
+ \nabla_\gamma^2F=(1-\mu^2)F_{,\mu\mu}-3\mu F_{,\mu}.
+\end{equation}
+For the specified parameters, Eq.~\eqref{eq:constraint-density} has a
+positive central core and negative surrounding regions. Its integral
+over the entire background three-sphere vanishes. The localized mass
+is therefore an excess relative to the homogeneous dust distribution,
+with compensation; it is not extra net mass added to an unchanged
+compact background. The broad tail from the low-mode removal is included
+in all calculations.
+
+For a quantitative mass label, define the positive-core excess using
+the comoving density contrast and background volume element:
+\begin{equation}\label{eq:mass}
+ M_+(\eta)=4\pi\bar\rho A^3
+ \int_0^{\chi_c}\Delta(\eta,\chi)\sin^2\chi\,\dd\chi,
+\end{equation}
+where $\chi_c$ is the first zero of $\Delta$. This is a specified linear
+background-relative mass diagnostic, not a nonlinear quasi-local mass.
+Its evolving value is appropriate to growing dust structure.

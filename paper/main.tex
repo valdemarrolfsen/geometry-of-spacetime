@@ -1,0 +1,62 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{iftex}
+\ifPDFTeX\usepackage[utf8]{inputenc}\fi
+\usepackage{lmodern}
+\usepackage[margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,bm,mathtools}
+\usepackage{graphicx,booktabs,microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,allcolors=blue!45!black]{hyperref}
+\usepackage{placeins}
+\usepackage[font=small,labelfont=bf]{caption}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.75}
+\setcounter{totalnumber}{4}
+\graphicspath{{figures/}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Hc}{\mathcal H}
+\newcommand{\Sthree}{\mathbb S^3}
+\newcommand{\ph}{\varphi}
+\newcommand{\order}{\mathcal O}
+\input{generated/numbers}
+\title{A Temporal--Radial View of an Expanding Three-Sphere\\with a Localized Mass Perturbation}
+\author{Valdemar Rolfsen}
+\date{Working draft v0.5 \quad 27 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An observer's sky combines emission events from different cosmic times.
+Drawing successive spatial slices as nested spheres makes this distinction
+visible: a past-directed light path crosses progressively smaller layers on
+an expanding branch. We extend this representation with a reproducible
+linear scalar perturbation of a closed, dust-filled FLRW universe. A smooth
+potential well, with its homogeneous and dipole components removed, specifies
+a localized overdensity and compensating surroundings. The linear Einstein
+constraints determine the density and velocity perturbations, and the
+potential evolves through the dust perturbation equation. This connects
+spatial geometry, normal-observer clock rates, and null propagation in one
+specified spacetime approximation. A first-order Euclidean embedding of the
+spatial slices produces an outward radial deformation at the potential well,
+while the lapse decreases there: spatial deformation and clock slowing
+cannot be identified with one ``depth into the past.'' We integrate light
+paths, match source worldlines to a fixed reception event, and check timing
+changes against an independent first-order integral. These are illustrative
+calculations in established general relativity, not an observational fit,
+a black-hole model, or a claim of a new gravitational law.
+\end{abstract}
+\input{sections/01-motivation}
+\input{sections/02-background}
+\input{sections/03-localized-mass}
+\input{sections/04-geometry-and-clocks}
+\input{sections/05-light-paths}
+\input{sections/06-results}
+\input{sections/07-discussion}
+\appendix
+\input{sections/appendix-conventions}
+\bibliographystyle{plainnat}
+\bibliography{references}
+\end{document}

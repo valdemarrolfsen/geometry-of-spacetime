@@ -1,0 +1,19 @@
+{
+  "scope": "Analytic/graphical comparison; no human participants or learning-outcome data.",
+  "eta_observer": 1.8,
+  "illustrative_1_plus_z": 1100,
+  "early_eta": 0.047240782616230687,
+  "early_axis_span_fractions": {
+    "nested_radius": 0.0009090909090909091,
+    "conformal_time": 0.02624487923123927,
+    "cosmic_time": 2.126627314066326e-05
+  },
+  "early_pixels_for_500_pixel_linear_span": {
+    "nested_radius": 0.45454545454545453,
+    "conformal_time": 13.122439615619635,
+    "cosmic_time": 0.01063313657033163
+  },
+  "null_tangent_angle_to_radial_degrees_at_reception": 51.56620156177409,
+  "recollapse_nested_event_separation": 3.1401849173675503e-16,
+  "recollapse_cosmic_time_separation_Amax_over_c": 2.5707963267948966
+}
