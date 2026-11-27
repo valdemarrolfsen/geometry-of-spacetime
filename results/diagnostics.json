@@ -1,0 +1,41 @@
+{
+  "model": "closed dust, Lambda=0, scalar growing mode, linear Einstein equations",
+  "units": "c=G=A_max=1; angles and conformal time dimensionless",
+  "parameters": {
+    "epsilon": 0.0001,
+    "sigma_rad": 0.18,
+    "eta_observer": 1.8,
+    "chi_observer": 0.65,
+    "baseline_source_distance_rad": 1.3
+  },
+  "potential_at_core": -0.0001,
+  "max_abs_density_comoving": 0.00374832258181572,
+  "max_abs_density_Newtonian": 0.003879893886248207,
+  "max_peculiar_speed_over_c": 0.00018948089800920544,
+  "core_radius_rad": 0.30408242108670563,
+  "positive_core_mass_GM_over_c2Amax": 1.1828180850900976e-05,
+  "core_lapse": 0.9998999949995,
+  "core_radial_embedding_fraction_first_order": 0.0001,
+  "core_clock_offset_Amax_over_c": -3.3580485859295755e-05,
+  "radial_timing": {
+    "additional_conformal_lookback": 6.553581781298945e-05,
+    "born_conformal_lookback": 6.553293980440618e-05,
+    "earlier_emission_time_Amax_over_c": 4.010848704744108e-06,
+    "emission_eta": 0.499934464182187
+  },
+  "matched_source_025": {
+    "angular_shift_rad": 0.00014688700115444986,
+    "additional_conformal_lookback": 4.55919422712725e-05,
+    "source_residual": 2.260145413406615e-11
+  },
+  "first_order_angular_shift_rad": 0.00014685756452379457,
+  "max_sphere_constraint_error": 6.744020897286873e-10,
+  "max_tangency_constraint_error": 6.959192562494554e-10,
+  "delay_remainder_power": 2.0001572867119446,
+  "software": {
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "sympy": "1.14.0",
+    "matplotlib": "3.11.2"
+  }
+}

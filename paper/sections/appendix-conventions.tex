@@ -1,0 +1,86 @@
+\section{Connection to the general FLRW visualization}
+The earlier manuscript used a dimensionless scale factor $a(t_o)=1$
+and a length-valued comoving radial coordinate $r$. Its radial metric is
+\begin{equation}
+ \dd s_{\mathrm{rad}}^2=-c^2\dd t^2+a^2(t)\dd r^2.
+\end{equation}
+For any positive plotting length $L$, define $R=La$ and $\psi=r/L$.
+On an interval with $H>0$,
+\begin{equation}\label{eq:plotting-metric}
+ \dd s_{\mathrm{rad}}^2=-\frac{c^2}{H^2R^2}\dd R^2+R^2\dd\psi^2,
+ \qquad \frac{\dd\psi}{\dd R}=-\frac{c}{HR^2}
+\end{equation}
+for an incoming future-directed ray. For a closed background with
+present curvature radius $R_c$, setting $L=R_c$ gives
+$R=A=R_ca$ and $\psi=\chi$. For flat or negatively curved spatial
+geometry, the same polar map is a radial visualization, not a round
+embedding of complete spatial slices. Changing arbitrary $L$ changes
+angular sweep without changing the underlying physics.
+
+For the illustrative history $a=(t/t_o)^p$ with $0<p<1$,
+\begin{equation}
+ \psi=\frac{ct_o}{L(1-p)}\left[1-(t/t_o)^{1-p}\right].
+\end{equation}
+The sweep is finite at the formal past limit. For $p=1$,
+$\psi=(ct_o/L)\log(t_o/t)$ and the drawing is logarithmically spiral.
+These shape statements are properties of the map and the chosen
+history; neither implies physical rotation.
+
+\section{Distances, horizons, and the all-sky early universe}
+For a background comoving source,
+\begin{equation}
+ D_C=c\int_{t_e}^{t_o}\frac{\dd t}{a(t)},\qquad
+ D_{\mathrm{proper}}(t)=a(t)D_C,\qquad
+ 1+z=\frac{1}{a(t_e)}.
+\end{equation}
+In a closed background, transverse comoving distance is
+$D_M=R_c\sin(D_C/R_c)$ on the direct branch, and
+$D_A=D_M/(1+z)$, $D_L=(1+z)D_M$ under the usual transparent-propagation
+conditions \citep{Hogg1999}. These relations are background expressions;
+the perturbed model requires optical transport to calculate their
+direction-dependent corrections.
+
+The particle horizon uses the convergent integral from the adopted past
+boundary to reception. The event horizon uses the remaining future
+integral when it converges. The Hubble radius $c/H$ is generally neither
+of these causal horizons \citep{DavisLineweaver2004}.
+
+In the thin-last-scattering background approximation, the emission
+locus of the primary CMB photons received at $p_o$ is
+\begin{equation}
+ \mathcal S_*(p_o)=\partial J^-(p_o)\cap\Sigma_{t_*},
+\end{equation}
+restricted to the direct light cone before caustics. The causal past
+$J^-$ itself also includes timelike-related events. The observed emission
+locus samples the same early epoch in every direction; it is not a
+material shell around the observer today. Finite last-scattering width,
+scattering, and perturbations require a transfer calculation
+\citep{SeljakZaldarriaga1996}. The geometry alone does not explain the
+CMB spectrum, its near-uniformity, or the initial conditions.
+
+\section{Numerical conventions and validity}
+\begin{table}[htbp]
+ \centering\small
+ \begin{tabular}{@{}lp{0.72\linewidth}@{}}
+ \toprule Symbol & Meaning\\\midrule
+ $A$ & Length-valued background curvature radius\\
+ $a$ & Dimensionless scale factor, used in the general-map appendix\\
+ $\eta,s$ & Dimensionless conformal time and conformal lookback\\
+ $\chi$ & Geodesic angular distance on the unit three-sphere\\
+ $\alpha$ & Local observer-frame launch angle for a view line\\
+ $\ph$ & Dimensionless metric potential $\Phi/c^2$\\
+ $\Delta,\delta_N$ & Comoving and Newtonian-gauge density contrasts\\
+ $V$ & Peculiar-velocity potential, $v^i/c=\nabla^i_\gamma V$\\
+ $N,B$ & Lapse factor and conformal spatial factor of the truncated metric\\
+ $\bm n,\bm p$ & Unit-sphere position and tangent optical momentum\\
+ \bottomrule
+ \end{tabular}
+\end{table}
+The default growth integration uses DOP853 with relative tolerance
+$2\times10^{-12}$. Standard ray integration uses relative tolerance
+$2\times10^{-10}$, checked against a tighter run. Source shooting uses
+tangent-plane endpoint residuals and verifies the full embedded source
+position. The numerical model checks its time interval; the example
+also verifies small potential, density contrast, and peculiar velocity.
+Changing width or amplitude requires rechecking all three, since a
+small potential alone does not imply a linear matter perturbation.
