@@ -32,8 +32,10 @@ jobs:
           mkdir -p build output/pdf
           cd paper
           latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=../build main.tex
+          latexmk -pdf -interaction=nonstopmode -halt-on-error -outdir=../build diagram-comparison.tex
           cd ..
           cp build/main.pdf output/pdf/geometry-of-spacetime-v0.5.pdf
+          cp build/diagram-comparison.pdf output/pdf/diagram-comparison.pdf
       - name: Upload paper and numerical results
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:

@@ -1,5 +1,13 @@
 # Changes
 
+## Diagram comparison - 27 November 2026
+
+- Identified the direct polar-map precedent in Wright's tutorial and added explicit attribution to the manuscript.
+- Compared identical events in cosmic/comoving, cosmic/proper-distance, conformal, and nested maps, with three new generated figures and a standalone LaTeX assessment.
+- Distinguished complete spatial slices from their visible subsets and quantified early-epoch compression and recollapse overlap.
+- Added three geometry checks, reproducible diagnostics, and CI compilation of the assessment.
+- Proposed a controlled reader study; no educational effectiveness or novelty result is claimed.
+
 ## v0.5 — 27 November 2026
 
 - Reorganized the manuscript as a modular LaTeX project with a BibTeX bibliography and compiled PDF.
